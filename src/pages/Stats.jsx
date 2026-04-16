@@ -5,19 +5,19 @@ import { useTimeline } from '../context/TimelineContext';
 const Stats = () => {
   const { activities } = useTimeline();
 
-  // Data preparation for the Pie Chart
+ 
   const data = [
     { name: 'Call', value: activities.filter(a => a.type === 'Call').length },
     { name: 'Text', value: activities.filter(a => a.type === 'Text').length },
     { name: 'Video', value: activities.filter(a => a.type === 'Video').length },
   ].filter(item => item.value > 0);
 
-  // Colors matching the KinKeeper theme
+ 
   const COLORS = ['#4f46e5', '#10b981', '#f59e0b'];
 
   return (
     <div className="max-w-4xl mx-auto p-10">
-      {/* C1 Requirement: Heading */}
+     
       <h1 className="text-3xl font-bold mb-8 text-center">Friendship Analytics</h1>
       
       <div className="bg-white p-8 rounded-3xl border h-[450px] shadow-sm">
@@ -54,5 +54,5 @@ const Stats = () => {
   );
 };
 
-// This line fixes the SyntaxError in App.jsx!
+
 export default Stats;
