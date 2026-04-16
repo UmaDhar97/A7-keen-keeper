@@ -8,7 +8,7 @@ const FriendDetails = () => {
   const { id } = useParams();
   const { addActivity } = useTimeline();
   
-  // Find the specific friend from our JSON
+ 
   const friend = friendsData.find(f => f.id === parseInt(id));
 
   if (!friend) return <div className="p-20 text-center">Friend not found!</div>;
@@ -16,7 +16,7 @@ const FriendDetails = () => {
   return (
     <div className="max-w-7xl mx-auto px-6 py-10 grid grid-cols-1 lg:grid-cols-12 gap-8">
       
-      {/* LEFT COLUMN - 4/12 width */}
+      
       <div className="lg:col-span-4 space-y-6">
         <div className="bg-white border rounded-3xl p-6 text-center">
           <img src={friend.picture} alt={friend.name} className="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-indigo-50" />
@@ -30,7 +30,7 @@ const FriendDetails = () => {
           <p className="text-gray-500 text-sm mb-6">{friend.bio}</p>
           <p className="text-gray-400 text-sm mb-8">{friend.email}</p>
 
-          {/* Action Buttons (No Functionality Required) */}
+         
           <div className="space-y-3">
             <button className="w-full py-3 px-4 bg-gray-50 text-gray-700 rounded-xl flex items-center justify-center gap-2 hover:bg-gray-100 transition">
               <Moon size={18} /> Snooze 2 Weeks
@@ -45,10 +45,10 @@ const FriendDetails = () => {
         </div>
       </div>
 
-      {/* RIGHT COLUMN - 8/12 width */}
+     
       <div className="lg:col-span-8 space-y-6">
         
-        {/* ① Stats Cards */}
+       
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div className="bg-white border rounded-2xl p-6">
             <Clock className="text-indigo-500 mb-2" />
@@ -67,7 +67,7 @@ const FriendDetails = () => {
           </div>
         </div>
 
-        {/* ② Relationship Goal Card */}
+        
         <div className="bg-white border rounded-2xl p-6 flex justify-between items-center">
           <div>
             <h3 className="font-bold text-lg">Relationship Goal</h3>
@@ -78,7 +78,7 @@ const FriendDetails = () => {
           </button>
         </div>
 
-        {/* ③ Quick Check-In Card (Required Functionality) */}
+       
         <div className="bg-indigo-600 rounded-3xl p-8 text-white">
           <h3 className="text-xl font-bold mb-6">Quick Check-In</h3>
           <div className="grid grid-cols-3 gap-4">
