@@ -21,7 +21,7 @@ const Timeline = () => {
       <div className="flex justify-between items-center mb-8">
         <h1 className="text-3xl font-bold">Timeline</h1>
         
-        {/* Filter (Challenge C2) */}
+        
         <select 
           onChange={(e) => setFilter(e.target.value)}
           className="border rounded-lg px-4 py-2 bg-white"
