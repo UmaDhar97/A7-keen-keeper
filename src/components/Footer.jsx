@@ -6,7 +6,7 @@ export default function Footer() {
     <footer className="bg-[#1a3a32] text-white pt-20 pb-10 mt-20">
       <div className="max-w-7xl mx-auto px-6 text-center">
         
-        {/* --- MAIN BRANDING --- */}
+       
         <h2 className="text-6xl font-bold mb-6 tracking-tight">
           KeenKeeper
         </h2>
@@ -15,7 +15,7 @@ export default function Footer() {
           Your personal shelf of meaningful connections. Browse, tend, and nurture the relationships that matter most.
         </p>
 
-        {/* --- SOCIAL SECTION --- */}
+       
         <div className="mb-16">
           <h3 className="text-xl font-medium mb-6">Social Links</h3>
           <div className="flex justify-center gap-4">
@@ -31,7 +31,7 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* --- BOTTOM BAR --- */}
+       
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-gray-400 text-sm">
           <p>© 2026 KeenKeeper. All rights reserved.</p>
           
