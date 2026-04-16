@@ -8,7 +8,7 @@ const Home = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // 10.2: Loading animation requirement
+    
     const timer = setTimeout(() => {
       setFriends(friendsData);
       setLoading(false);
@@ -16,7 +16,7 @@ const Home = () => {
     return () => clearTimeout(timer);
   }, []);
 
-  // Helper to count statuses for the summary cards
+  
   const getCount = (status) => friends.filter(f => f.status === status).length;
 
   if (loading) {
@@ -29,7 +29,7 @@ const Home = () => {
 
   return (
     <div className="max-w-7xl mx-auto px-6 py-10">
-      {/* 2. Banner Section */}
+      
       <section className="text-center mb-16">
         <h1 className="text-4xl font-extrabold text-gray-900 mb-4 tracking-tight">
           Friends to keep close in your life
@@ -43,7 +43,7 @@ relationships that matter most.
         </button>
       </section>
 
-      {/* 4 Summary cards below the banner */}
+     
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-16">
         <SummaryCard icon={<Users className="text-blue-500" />} label="Total Friends" value={friends.length} />
         <SummaryCard icon={<CheckCircle className="text-green-500" />} label="On Track" value={getCount('on-track')} />
@@ -51,7 +51,7 @@ relationships that matter most.
         <SummaryCard icon={<AlertCircle className="text-red-500" />} label="Overdue" value={getCount('overdue')} />
       </div>
 
-      {/* 4. Your Friends Section (4-column grid) */}
+      
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {friends.map(friend => (
           <Link 
@@ -83,7 +83,7 @@ relationships that matter most.
   );
 };
 
-// Sub-component for Summary Cards
+
 const SummaryCard = ({ icon, label, value }) => (
   <div className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex items-center gap-4">
     <div className="p-3 bg-gray-50 rounded-xl">{icon}</div>
@@ -94,7 +94,7 @@ const SummaryCard = ({ icon, label, value }) => (
   </div>
 );
 
-// Sub-component for Status Badge with Conditional Styling
+
 const StatusBadge = ({ status }) => {
   const styles = {
     "overdue": "bg-red-50 text-red-600 border-red-100",
